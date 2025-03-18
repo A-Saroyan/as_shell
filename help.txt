@@ -1,0 +1,29 @@
+These shell commands are defined internally.  
+
+1. set
+Allows creating or updating variables. If the user types set NAME=VALUE, as_shell adds or modifies that variable in your dictionary. 
+If the user types set with no arguments, as_shell  lists all defined variables.
+
+2. unset
+Removes a named variable from  dictionary, so future expansions of $NAME produce empty or an error.
+
+3. echo
+Prints text, performing variable expansion on tokens that start with $. 
+For example, echo hello $USER would replace $USER with that dictionary entry’s value.
+
+4. pwd
+Retrieves the as_shell’s known path for PWD and prints it.  
+
+5. cd
+Changes the as_shell’s idea of the current directory. 
+ 
+
+6. help
+Lists  as_shell’s available builtin commands and simple usage notes.
+
+7. history
+Displays previously entered commands. The as_shell internally stores up to 500 lines in a circular or ring buffer. 
+By default, history can print all stored lines, or if history N is entered, print only the last N.
+
+8. exit
+Ends the main as_shell loop, typically returning control to the operating system.
